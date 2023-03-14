@@ -28,7 +28,7 @@ func TestRequestIDField(t *testing.T) {
 		IDField  string
 		problems testutils.Problems
 	}{
-		{"ValidNotDF", "", "", nil},
+		{"ValidNotDF", "", "", problems},
 		{"ValidClientSpecified", "style: DECLARATIVE_FRIENDLY", "string book_id = 3;", nil},
 		{"InvalidDF", "style: DECLARATIVE_FRIENDLY", "", problems},
 		{"InvalidType", "style: DECLARATIVE_FRIENDLY", "bytes book_id = 3;", problems},
